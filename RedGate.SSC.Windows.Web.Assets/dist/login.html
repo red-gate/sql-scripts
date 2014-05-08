@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="sqlScripts">
+  <head>
+    <meta charset="utf-8">
+    <title>SQL Scripts</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="/combined.js"></script>
+  </head>
+  <body ng-controller="LoginController" class="LoginPopup">
+    <p>To add favorites or share a script, you need to log in to your SQLServerCentral account.</p>
+    <div class="Grid">
+      <div class="Grid-cell u-size5of12">
+        <h3 class="LoginPopup-title">Log in to SQLServerCentral</h3>
+        <form ng-submit="login()" class="Form">
+          <label class="Form-label">Email address</label>
+          <input ng-model="username" ng-disabled="!inputControlsEnabled" class="Form-textbox">
+          <label class="Form-label">Password</label>
+          <input type="password" ng-model="password" ng-disabled="!inputControlsEnabled" class="Form-textbox">
+          <div class="Form-buttons">
+            <button type="submit" ng-disabled="!loginEnabled()" class="Button">Log in</button><a href="https://www.sqlservercentral.com/ResetMyPassword" target="_blank" class="LoginPopup-forgotPassword">Forgotten your password?</a>
+          </div>
+          <label ng-show="incorrectPasswordVisible" class="Form-label">Incorrect email address or password</label>
+        </form>
+      </div>
+      <div class="Grid-cell u-size2of12 LoginPopup-divider">
+        <div class="LoginPopup-verticalRule"></div><span>or</span>
+        <div class="LoginPopup-verticalRule"></div>
+      </div>
+      <div class="Grid-cell u-size5of12">
+        <h3 class="LoginPopup-title">Register an account</h3><a href="http://www.sqlservercentral.com/Register" target="_blank" class="Button">Register now</a>
+      </div>
+    </div>
+  </body>
+</html>

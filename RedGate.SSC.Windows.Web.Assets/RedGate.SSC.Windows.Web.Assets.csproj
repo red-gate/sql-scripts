@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{47BD11D5-6FD0-40D6-B3BF-4D48DDC5BFBE}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedGate.SSC.Windows.Web.Assets</RootNamespace>
+    <AssemblyName>RedGate.SSC.Windows.Web.Assets</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildingLocally Condition="'$(BuildingInsideVisualStudio)' != '' Or '$(BuildingInsideExpressionBlend)' != '' Or '$(NCrunch)' != '' ">true</BuildingLocally>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="AssetsAssembly.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="package.json" />
+    <None Include="Views\contribute.jade" />
+    <None Include="Views\favorites.jade" />
+    <None Include="Views\index.jade" />
+    <None Include="Views\login.jade" />
+    <None Include="Views\query-header.jade" />
+    <None Include="Views\scripts.jade" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="dist\easter-egg\asteroids.js" />
+    <EmbeddedResource Include="dist\images\star.svg" />
+    <Content Include="app.js" />
+    <Content Include="controllers\base.js" />
+    <Content Include="controllers\contribute.js" />
+    <Content Include="controllers\favorites.js" />
+    <Content Include="controllers\index.js" />
+    <Content Include="controllers\login.js" />
+    <Content Include="controllers\query-header.js" />
+    <Content Include="controllers\scripts.js" />
+    <Content Include="directives\index.js" />
+    <Content Include="directives\menu-item.js" />
+    <EmbeddedResource Include="dist\index.html" />
+    <EmbeddedResource Include="dist\login.html" />
+    <EmbeddedResource Include="dist\query-header.html" />
+    <EmbeddedResource Include="dist\views\contribute.html" />
+    <EmbeddedResource Include="dist\views\favorites.html" />
+    <EmbeddedResource Include="dist\views\scripts.html" />
+    <Content Include="images\star.svg" />
+    <Content Include="Scripts\angular-route.js" />
+    <Content Include="Scripts\angular.js" />
+    <Content Include="Scripts\easter-egg\asteroids.js" />
+    <Content Include="Scripts\easter-egg\konami.js" />
+    <Content Include="services\credentials.js" />
+    <Content Include="services\endpoints.js" />
+    <Content Include="services\favorites.js" />
+    <Content Include="services\index.js" />
+    <Content Include="services\operations.js" />
+    <Content Include="services\script-item.js" />
+    <Content Include="services\script-snippet.js" />
+    <Content Include="services\scripts.js" />
+    <Content Include="services\utils.js" />
+    <Content Include="Styles\grid.css" />
+    <Content Include="Styles\query-header.css" />
+    <Content Include="Styles\stars.css" />
+    <Content Include="gulpfile.js" />
+    <Content Include="Styles\alert.css" />
+    <Content Include="Styles\login.css" />
+    <EmbeddedResource Include="dist\combined.js" />
+    <Content Include="Styles\form.css" />
+    <Content Include="Styles\loading.css" />
+    <Content Include="Styles\login-popup.css" />
+    <Content Include="Styles\sidebar.css" />
+    <Content Include="Styles\suit\grid.css" />
+    <Content Include="Styles\suit\size.css" />
+    <EmbeddedResource Include="dist\main.css" />
+    <Content Include="Styles\base.css" />
+    <Content Include="Styles\button.css" />
+    <Content Include="Styles\main.css" />
+    <Content Include="Styles\navigation.css" />
+    <Content Include="Styles\normalize.css" />
+    <Content Include="Styles\pagination.css" />
+    <Content Include="Styles\script-list.css" />
+    <Content Include="Styles\script.css" />
+    <Content Include="Styles\search.css" />
+    <EmbeddedResource Include="Scripts\highlight.js\highlight.js" />
+    <EmbeddedResource Include="Scripts\highlight.js\styles\github.css" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(SolutionDir)\MSBuild\Product.targets" />
+</Project>

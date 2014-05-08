@@ -1,0 +1,65 @@
+.Stars {
+	background: url('/images/star.svg');
+	background-size: 16px;
+	display: inline-block;
+	height: 15px;
+	margin-left: 10px;
+	margin-right: 80px;
+	width: 0; /* 5 * 20px star + 4 * 5px gutter */
+}
+
+.is-rated5.Stars {
+	margin-right: 0;
+	width: 80px;
+}
+
+.is-rated45.Stars {
+	margin-right: 6px;
+	width: 74px;
+}
+
+.is-rated4.Stars {
+	margin-right: 15px;
+	width: 65px;
+}
+
+.is-rated35.Stars {
+	margin-right: 22px;
+	width: 58px;
+}
+
+.is-rated3.Stars {
+	margin-right: 30px;
+	width: 50px;
+}
+
+.is-rated25.Stars {
+	margin-right: 38px;
+	width: 42px;
+}
+
+.is-rated2.Stars {
+	margin-right: 45px;
+	width: 35px;
+}
+
+.is-rated15.Stars {
+	margin-right: 54px;
+	width: 26px;
+}
+
+.is-rated1.Stars {
+	margin-right: 60px;
+	width: 20px;
+}
+
+.is-rated05.Stars {
+	margin-right: 70px;
+	width: 10px;
+}
+
+.is-rated0.Stars:after {
+	content: 'No rating';
+	white-space: nowrap;
+}
+

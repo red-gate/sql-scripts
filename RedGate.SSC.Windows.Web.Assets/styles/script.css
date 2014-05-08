@@ -1,0 +1,31 @@
+.Script {
+  display: flex;
+  flex-direction: column;
+  float: right;
+  height: 100%;
+  padding: 0 30px 76px 30px;
+  overflow: auto;
+  width: 60%;
+}
+
+.Script-info {
+  flex: none;
+}
+
+.Script-buttons {
+  margin: 20px 0;
+}
+
+.Script-button {
+  margin: 20px 10px 20px 0;
+}
+
+
+.Script-sql {
+  border: 1px solid #ccc;
+  flex: 100%;
+  font-size: 0.9em;
+  margin: 0 0 0 0;
+  padding: 10px;
+  overflow-y: auto;
+}

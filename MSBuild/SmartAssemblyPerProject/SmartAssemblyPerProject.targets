@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<UsingTask TaskName="SmartAssembly.MSBuild.Tasks.Build" AssemblyName="SmartAssembly.MSBuild.Tasks, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7f465a1c156d4d57" />
+
+	<PropertyGroup Condition="'$(Configuration)' == 'Release'">
+		<RedGate_DoSign>true</RedGate_DoSign>
+		<RedGate_DontObfuscate>true</RedGate_DontObfuscate> <!-- This means we Authenticode sign the output in Release not Obfuscated -->
+	</PropertyGroup>
+
+	<Target Name="RedGate_Obfuscate" Condition=" '$(Configuration)' == 'Release' And Exists('$(SolutionDir)\MSBuild\{sa}\$(TargetFileName).{sa}proj')">
+		<SmartAssembly.MSBuild.Tasks.Build 
+		 ProjectFile="$(SolutionDir)\MSBuild\{sa}\$(TargetFileName).{sa}proj"
+		 Input="$(OutputPath)\$(TargetFileName)"
+		 Output="$(OutputPath)\$(TargetFileName)"
+		 />
+	</Target>
+</Project>

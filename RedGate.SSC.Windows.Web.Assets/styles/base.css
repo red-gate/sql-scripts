@@ -1,0 +1,37 @@
+*, *:before, *:after { 	
+	box-sizing: border-box;
+}
+
+html,
+body {
+	font-family: 'Segoe UI Light', sans-serif;
+	height: 100%;
+	overflow: hidden;
+}
+
+h1, h2, h3, h4 {
+	font-family: 'Segoe UI Semibold', sans-serif;
+	margin: 0.5em 0;
+}
+
+p {
+	margin: 0.7em 0;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
+
+textarea { 
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+	border: 1px solid #333333;
+}
+
+.Page {
+	margin: 20px 30px;
+}

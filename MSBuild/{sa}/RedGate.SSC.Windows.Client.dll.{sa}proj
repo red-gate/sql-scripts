@@ -1,0 +1,65 @@
+<SmartAssemblyProject ProjectId="{DF3AA7A4-C7C3-45A4-89B9-49AA5AF2B1D6}" Version="2.0">
+    <MainAssemblyFileName>..\..\Build\Debug\RedGate.SSC.Windows.Client.dll</MainAssemblyFileName>
+    <FriendlyName>SQL Scripts SSMS Add-In</FriendlyName>
+    <CompanyName>SQLServerCentral.com</CompanyName>
+    <Configuration Name="Release">
+        <ApplicationName>SQL Scripts SSMS Add-In</ApplicationName>
+        <Destination DestinationFileName="..\..\Build\Obfuscated\RedGate.SSC.Windows.Client.dll" />
+        <Assemblies>
+            <Assembly AssemblyName="RedGate.SSC.Windows.Client, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging>
+                    <ResourcesCompression Compress="0" />
+                    <MemberRefsProxy />
+                    <Pruning Prune="0">
+                        <Exclusion />
+                    </Pruning>
+                    <Obfuscation Obfuscate="0">
+                        <Exclusion />
+                    </Obfuscation>
+                    <ControlFlow Obfuscate="0" ObfuscationLevel="2" />
+                    <StringsEncoding />
+                    <ResourcesPruning />
+                </Merging>
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="RedGate.Shared.Utils, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+                <Embedding />
+            </Assembly>
+	    <Assembly AssemblyName="RedGate.Shared.Controls, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="CefSharp, Culture=neutral, PublicKeyToken=40c4b6fc221f4138">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="RedGate.SIPFrameworkShared, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="Ninject, Culture=neutral, PublicKeyToken=c7192dc5380945e7">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="CefSharp.WinForms, Culture=neutral, PublicKeyToken=40c4b6fc221f4138">
+                <Merging />
+                <Embedding />
+            </Assembly>
+            <Assembly AssemblyName="RedGate.SSC.Windows.Web.Assets, Culture=neutral, PublicKeyToken=7f465a1c156d4d57">
+                <Merging />
+                <Embedding />
+            </Assembly>
+        </Assemblies>
+        <Options>
+            <Obfuscation ChangeMethodParent="1" FieldsNameMangling="2" NameMangling="1" />
+            <ExceptionReporting AlwaysContinueOnError="1" ReportExceptions="1" />
+            <StrongNameSigning KeyFileName="\\red-gate.com\Files\RG_Build_Key\RedGate.snk" Sign="1" />
+            <OtherProtections AddMetadataStream="1" SuppressIldasm="0" />
+            <StringsEncoding Compress="1" Encode="0" UseImprovedEncoding="0" />
+            <OtherOptimizations />
+            <Debugging CreatePDB="1" />
+            <FeatureUsageReporting />
+        </Options>
+    </Configuration>
+</SmartAssemblyProject>

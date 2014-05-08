@@ -1,0 +1,46 @@
+.Sidebar
+  form.Form--noMargin.Sidebar-static.Search(onsubmit="return false;")
+    div.Search-box
+      input.Form-textbox.Search-input(type="search", placeholder="Search for SQL Scripts", ng-model="searchText")
+
+  .Sidebar-static#error(ng-show="false")
+    .Alert.Alert--error Failed to load scripts.
+      a(ng-click="loadPage(1)") Try again
+  .Sidebar-static(ng-if="!selectedScript && !loading.isLoading")
+    p.Sidebar-text No results found
+
+  .Sidebar-full.ScriptList(ng-class="{ 'is-loading': loading.isLoading }")
+    .ScriptList-item(ng-repeat="script in scripts", ng-click="selectScript(script)" ng-class="{ 'is-selected': selectedScript === script }")
+      .ScriptList-title(ng-bind="script.title")
+      .ScriptList-details
+        span.ScriptList-author(ng-bind="script.author")
+        span.ScriptList-stats
+          span(ng-bind="script.downloads")
+          |  views
+          span.Stars(ng-class="'Stars ' + script.ratingClass")
+    .Loading(ng-show="loading.isLoading")
+      .Loading-item
+      .Loading-item
+      .Loading-item
+  .Sidebar-static(ng-if="paging.pageCount > 1")
+    .Pagination
+      a.Pagination-button(ng-click="prevPage()") « Previous
+      span.Pagination-middle
+        input.Form-textbox.Pagination-pageCount(type="text", ng-model="paging.current", onclick="this.select()")
+        = " of "
+        span(ng-bind="paging.pageCount")
+      a.Pagination-button(ng-click="nextPage()") Next »
+
+.Script(ng-show="selectedScript")
+  .Script-info
+    .Script-title
+      h2(ng-bind="selectedScript.title")
+    .Script-buttons
+      a.Button.Script-button(ng-click="open(selectedScript.id)") Open
+      span(ng-hide="selectedScript.addToFavoritesVisible") Favorited!
+      a.Button.Script-button(ng-click="addToFavorites(selectedScript)", ng-show="selectedScript.addToFavoritesVisible") Add to favorites
+
+    h3 Description
+    p.Script-description(ng-bind="selectedScript.description")
+    h3 Script
+  pre.Script-sql.highlight.scrollable.language-sql(ng-bind="selectedScript.scriptText")

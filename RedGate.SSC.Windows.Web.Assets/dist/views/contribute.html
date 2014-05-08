@@ -1,0 +1,28 @@
+
+<div ng-if="!scriptContributed" class="Page">
+  <form ng-submit="submitScript()" class="Grid Grid--withGutter Form">
+    <div class="Grid-cell u-size8of12">
+      <label class="Form-label">Script to share</label>
+      <textarea ng-model="script.content" rows="17" class="Form-textarea u-sizeFull"></textarea>
+    </div>
+    <div class="Grid-cell u-size4of12">
+      <label class="Form-label">Script Title</label>
+      <input type="text" ng-model="script.title" class="Form-textbox u-sizeFull"/>
+      <label class="Form-label">Description</label>
+      <textarea ng-model="script.description" rows="5" class="Form-textarea u-sizeFull"></textarea>
+      <label class="Form-label">Category</label>
+      <input type="text" ng-model="script.category" class="Form-textbox u-sizeFull"/>
+      <label class="Form-checkbox">
+        <input type="checkbox" ng-model="agreements.copyright"/> I own the copyright for this material, or have permission from the owner.
+      </label>
+      <label class="Form-checkbox">
+        <input type="checkbox" ng-model="agreements.termsAndConditions"/><span> I agree to the </span><a href="http://www.sqlservercentral.com/About/WriteForUs/" target="_blank">terms and conditions</a>
+      </label>
+      <button type="submit" ng-disabled="submitScriptDisabled()" class="Button Button--large">Contribute</button>
+    </div>
+  </form>
+</div>
+<div ng-if="scriptContributed" class="Page">
+  <h3>Script contributed</h3>
+  <p>Thanks for contributing a script!</p>
+</div>

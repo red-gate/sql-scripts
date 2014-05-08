@@ -1,0 +1,31 @@
+.Sidebar
+  .Sidebar-static#error(ng-show="false")
+    .Alert.Alert--error Failed to load scripts.
+      a(onclick="location.reload(true)") Try again
+  .Sidebar-static(ng-if="scripts.length === 0 && !loading.isLoading")
+    p.Sidebar-text No results found
+  .Sidebar-full.ScriptList(ng-class="{ 'is-loading': loading.isLoading }")
+    .ScriptList-item(ng-repeat="script in scripts", ng-click="selectScript(script)" ng-class="{ 'is-selected': selectedScript == script, 'is-updated': script.updated }")
+        .ScriptList-title(ng-bind="script.title")
+        .ScriptList-details
+          span.ScriptList-author(ng-bind="script.author")
+          span.ScriptList-stats
+            span(ng-bind="script.downloads")
+            |  views
+            span.Stars(ng-class="'Stars ' + script.ratingClass")
+    .Loading(ng-show="loading.isLoading")
+      .Loading-item
+      .Loading-item
+      .Loading-item
+
+.Script(ng-show="selectedScript")
+  .Script-info
+    .Script-title
+      h2(ng-bind="selectedScript.title")
+    .Script-buttons
+      a.Button(ng-click="open(selectedScript.id)") Open
+
+    h3 Description
+    p.Script-description(ng-bind="selectedScript.description")
+    h3 Script
+  pre.Script-sql.highlight.scrollable.language-sql(ng-bind="selectedScript.scriptText")

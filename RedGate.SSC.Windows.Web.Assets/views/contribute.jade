@@ -1,0 +1,27 @@
+.Page(ng-if="!scriptContributed")
+  form.Grid.Grid--withGutter.Form(ng-submit="submitScript()")
+    .Grid-cell.u-size8of12
+      label.Form-label Script to share
+      textarea.Form-textarea.u-sizeFull(ng-model="script.content", rows="17")
+    .Grid-cell.u-size4of12
+      label.Form-label Script Title
+      input.Form-textbox.u-sizeFull(type="text", ng-model="script.title")
+      label.Form-label Description
+      textarea.Form-textarea.u-sizeFull(ng-model="script.description", rows="5")
+      label.Form-label Category
+      input.Form-textbox.u-sizeFull(type="text", ng-model="script.category")
+
+      label.Form-checkbox
+        input(type="checkbox", ng-model="agreements.copyright")
+        |  I own the copyright for this material, or have permission from the owner.
+
+      label.Form-checkbox
+        input(type="checkbox", ng-model="agreements.termsAndConditions")
+        span= " I agree to the "
+        a(href="http://www.sqlservercentral.com/About/WriteForUs/", target="_blank") terms and conditions
+
+      button.Button.Button--large(type="submit", ng-disabled="submitScriptDisabled()") Contribute
+
+.Page(ng-if="scriptContributed")
+  h3 Script contributed
+  p Thanks for contributing a script!

@@ -1,0 +1,41 @@
+
+<div class="Sidebar">
+  <form onsubmit="return false;" class="Form--noMargin Sidebar-static Search">
+    <div class="Search-box">
+      <input type="search" placeholder="Search for SQL Scripts" ng-model="searchText" class="Form-textbox Search-input"/>
+    </div>
+  </form>
+  <div id="error" ng-show="false" class="Sidebar-static">
+    <div class="Alert Alert--error">Failed to load scripts.<a ng-click="loadPage(1)">Try again</a></div>
+  </div>
+  <div ng-if="!selectedScript &amp;&amp; !loading.isLoading" class="Sidebar-static">
+    <p class="Sidebar-text">No results found</p>
+  </div>
+  <div ng-class="{ 'is-loading': loading.isLoading }" class="Sidebar-full ScriptList">
+    <div ng-repeat="script in scripts" ng-click="selectScript(script)" ng-class="{ 'is-selected': selectedScript === script }" class="ScriptList-item">
+      <div ng-bind="script.title" class="ScriptList-title"></div>
+      <div class="ScriptList-details"><span ng-bind="script.author" class="ScriptList-author"></span><span class="ScriptList-stats"><span ng-bind="script.downloads"></span> views<span ng-class="'Stars ' + script.ratingClass" class="Stars"></span></span></div>
+    </div>
+    <div ng-show="loading.isLoading" class="Loading">
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+    </div>
+  </div>
+  <div ng-if="paging.pageCount &gt; 1" class="Sidebar-static">
+    <div class="Pagination"><a ng-click="prevPage()" class="Pagination-button">« Previous</a><span class="Pagination-middle">
+        <input type="text" ng-model="paging.current" onclick="this.select()" class="Form-textbox Pagination-pageCount"/> of <span ng-bind="paging.pageCount"></span></span><a ng-click="nextPage()" class="Pagination-button">Next »</a></div>
+  </div>
+</div>
+<div ng-show="selectedScript" class="Script">
+  <div class="Script-info">
+    <div class="Script-title">
+      <h2 ng-bind="selectedScript.title"></h2>
+    </div>
+    <div class="Script-buttons"><a ng-click="open(selectedScript.id)" class="Button Script-button">Open</a><span ng-hide="selectedScript.addToFavoritesVisible">Favorited!</span><a ng-click="addToFavorites(selectedScript)" ng-show="selectedScript.addToFavoritesVisible" class="Button Script-button">Add to favorites</a></div>
+    <h3>Description</h3>
+    <p ng-bind="selectedScript.description" class="Script-description"></p>
+    <h3>Script</h3>
+  </div>
+  <pre ng-bind="selectedScript.scriptText" class="Script-sql highlight scrollable language-sql"></pre>
+</div>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>RedGate.SSC.Windows.Update.Interfaces</id>
+    <version>1.0.0</version>
+    <title>Update Interface for SQL Scripts</title>
+    <authors>Red Gate</authors>
+    <owners>Red Gate</owners>
+    <projectUrl>https://github.com/red-gate/sqlscripts</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Defines the interfaces that SQL Scripts uses to load the auto updater</description>
+    <summary>Separate interfaces are needed so the OSS project can be shipped with a null-object implementation of the interfaces, and the Red Gate distribution can distribute one based on Red Gate CfU</summary>
+    <references>
+      <reference file="RedGate.SSC.Windows.Update.Interfaces.dll" />
+    </references>
+  </metadata>
+  <files>
+    <file src="RedGate.SSC.Windows.Update.Interfaces.dll" target="lib" />
+    <file src="RedGate.SSC.Windows.Update.Interfaces.pdb" target="lib" />
+  </files>
+</package>

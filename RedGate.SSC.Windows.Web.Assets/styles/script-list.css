@@ -1,0 +1,74 @@
+.ScriptList {
+	overflow: auto;
+	flex: 100%;
+	position: relative;
+}
+
+.ScriptList.is-loading:after {
+	background: rgba(0, 0, 0, 0.3);
+	content: '';
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+.ScriptList-item
+{
+	background: #FCFCFC;
+	box-shadow: inset 0 1px #eee;
+	cursor: pointer;
+	font-family: 'Segoe UI';
+	padding: 6px 10px 6px 30px;
+	position: relative;
+	-webkit-user-select: none;
+}
+
+.ScriptList-item.is-selected {
+	background: #fff;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	box-shadow: none !important;
+	padding: 5px 10px 5px 30px;
+}
+
+.ScriptList-item.is-selected:before {
+	background: #d14;
+	content: '';
+	height: 65px;
+	left: 0;
+	position: absolute;
+	top: -1px;
+	width: 5px;
+}
+
+.ScriptList-item.is-selected + .ScriptList-item {
+	box-shadow: none;
+}
+
+.ScriptList-title {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.ScriptList-item.is-updated {
+	font-family: 'Segeo UI Semibold', sans-serif;
+	font-weight: 600;
+}
+
+.ScriptList-details {
+	color: #777;
+	font-size: 0.9em;
+	margin-top: 4px;
+}
+
+.ScriptList-author {
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: 600;
+}
+
+.ScriptList-stats {
+	float: right;
+}

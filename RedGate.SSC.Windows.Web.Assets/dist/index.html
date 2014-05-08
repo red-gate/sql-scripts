@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="sqlScripts">
+  <head>
+    <meta charset="utf-8">
+    <title>SQL Scripts</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="/combined.js"></script>
+  </head>
+  <body ng-controller="BaseController">
+    <div class="NavigationBar">
+      <ul class="Navigation">
+        <li data-menu-item class="Navigation-item"><a href="#/" class="Navigation-link">All Scripts</a></li>
+        <li data-menu-item class="Navigation-item"><a href="#/favorites" class="Navigation-link"><span>Favorites</span><span ng-show="favoritesUpdated &gt; 0"><span> (</span><span ng-bind="favoritesUpdated"></span><span>)</span></span></a></li>
+        <li data-menu-item class="Navigation-item"><a href="#/contribute" class="Navigation-link">Contribute</a></li>
+      </ul>
+      <ul class="Login">
+        <li><span ng-show="isLoggedIn"><span ng-bind="username"></span> (<a ng-click="doLogout()" class="Login-link">Logout</a>)</span><a ng-show="!isLoggedIn" ng-click="doLogin()" class="Login-link">Log in</a></li>
+      </ul>
+    </div>
+    <ng-view></ng-view>
+    <div ng-class="{'is-loaded': loading.pageLoaded }" class="Loading-backdrop"></div>
+    <div ng-class="{'is-loaded': loading.pageLoaded }" class="Loading Loading--page">
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+.NavigationBar {
+	background: #fff;
+	border: 0;
+	border-bottom: 1px solid #eeeeee;
+	font-family: 'Segoe UI Light', sans-serif;
+	height: 52px;
+	position: relative;
+	width: 100%;
+	z-index: 40;
+}
+
+.Navigation {
+	list-style: none;
+	display: inline-flex;
+	margin: 0;
+	padding: 0 0 0 30px;
+	width: 300px;
+}
+
+.Navigation-link {
+	color: #333;
+	display: block;
+	font-size: 24px;
+	padding: 10px;
+	text-decoration: none;
+	text-transform: lowercase;
+}
+
+.is-active .Navigation-link {
+	color: #fff;
+}
+
+.Navigation-item {
+	display: inline-block;
+	flex: none;
+	margin-right: 20px;
+}
+
+.Navigation-item.is-active {
+	background: #d14;
+}

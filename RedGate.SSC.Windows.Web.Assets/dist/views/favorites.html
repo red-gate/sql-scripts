@@ -1,0 +1,32 @@
+
+<div class="Sidebar">
+  <div id="error" ng-show="false" class="Sidebar-static">
+    <div class="Alert Alert--error">Failed to load scripts.<a onclick="location.reload(true)">Try again</a></div>
+  </div>
+  <div ng-if="scripts.length === 0 &amp;&amp; !loading.isLoading" class="Sidebar-static">
+    <p class="Sidebar-text">No results found</p>
+  </div>
+  <div ng-class="{ 'is-loading': loading.isLoading }" class="Sidebar-full ScriptList">
+    <div ng-repeat="script in scripts" ng-click="selectScript(script)" ng-class="{ 'is-selected': selectedScript == script, 'is-updated': script.updated }" class="ScriptList-item">
+      <div ng-bind="script.title" class="ScriptList-title"></div>
+      <div class="ScriptList-details"><span ng-bind="script.author" class="ScriptList-author"></span><span class="ScriptList-stats"><span ng-bind="script.downloads"></span> views<span ng-class="'Stars ' + script.ratingClass" class="Stars"></span></span></div>
+    </div>
+    <div ng-show="loading.isLoading" class="Loading">
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+      <div class="Loading-item"></div>
+    </div>
+  </div>
+</div>
+<div ng-show="selectedScript" class="Script">
+  <div class="Script-info">
+    <div class="Script-title">
+      <h2 ng-bind="selectedScript.title"></h2>
+    </div>
+    <div class="Script-buttons"><a ng-click="open(selectedScript.id)" class="Button">Open</a></div>
+    <h3>Description</h3>
+    <p ng-bind="selectedScript.description" class="Script-description"></p>
+    <h3>Script</h3>
+  </div>
+  <pre ng-bind="selectedScript.scriptText" class="Script-sql highlight scrollable language-sql"></pre>
+</div>

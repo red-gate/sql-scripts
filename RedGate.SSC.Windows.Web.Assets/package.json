@@ -1,0 +1,26 @@
+{
+  "name": "SQLScripts",
+  "version": "0.0.1",
+  "description": "SQL scripts from SQL Server Central.",
+  "author": "Red Gate",
+  "devDependencies": {
+    "gulp-concat": "~2.1.7",
+    "gulp-util": "~2.2.12",
+    "gulp": "3.5.0",
+    "gulp-uglify": "~0.1.0",
+    "gulp-csso": "~0.1.8",
+    "gulp-sass": "~0.4.1",
+    "gulp-jade": "~0.3.0",
+    "gulp-livereload": "~1.2.0",
+    "tiny-lr": "0.0.5",
+    "express": "~3.4.8",
+    "connect-livereload": "~0.3.2",
+    "gulp-minify-css": "~0.3.0",
+    "gulp-autoprefixer": "git+https://git@github.com/thorsteinsson/gulp-autoprefixer.git",
+    "rework-import": "0.0.3",
+    "gulp-rework": "~0.2.1",
+    "connect-modrewrite": "~0.6.4-pre",
+    "gulp-browserify": "~0.5.0",
+    "event-stream": "~3.1.0"
+  }
+}

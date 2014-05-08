@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A9666BD0-6CD9-4761-9E43-728BD8091A1C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RedGate.SSC.Windows.Client</RootNamespace>
+    <AssemblyName>RedGate.SSC.Windows.Client</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PlatformTarget>x86</PlatformTarget>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>$(SolutionDir)Build\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>$(SolutionDir)Build\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup>
+    <BuildingLocally Condition="'$(BuildingInsideVisualStudio)' != '' Or '$(BuildingInsideExpressionBlend)' != '' Or '$(NCrunch)' != '' ">true</BuildingLocally>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CefSharp, Version=1.25.4.0, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.WinForms.1.25.3\lib\net40\CefSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="CefSharp.WinForms, Version=1.25.4.29918, Culture=neutral, PublicKeyToken=40c4b6fc221f4138, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\CefSharp.WinForms.1.25.3\lib\net40\CefSharp.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="CommandLine">
+      <HintPath>..\packages\CommandLineParser.1.9.71\lib\net40\CommandLine.dll</HintPath>
+    </Reference>
+    <Reference Include="CredentialManagement">
+      <HintPath>..\packages\CredentialManagement.1.0.1\lib\net35\CredentialManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="JetBrains.Annotations.NET.2.0">
+      <HintPath>..\packages\JetBrains.Annotations.7.0\lib\net35\JetBrains.Annotations.NET.2.0.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net">
+      <HintPath>..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin">
+      <HintPath>..\packages\Microsoft.Owin.2.1.0\lib\net40\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.FileSystems">
+      <HintPath>..\packages\Microsoft.Owin.FileSystems.2.1.0\lib\net40\Microsoft.Owin.FileSystems.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Hosting">
+      <HintPath>..\packages\Microsoft.Owin.Hosting.2.1.0\lib\net40\Microsoft.Owin.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.StaticFiles">
+      <HintPath>..\packages\Microsoft.Owin.StaticFiles.2.1.0\lib\net40\Microsoft.Owin.StaticFiles.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Testing">
+      <HintPath>..\packages\Microsoft.Owin.Testing.2.1.0\lib\net40\Microsoft.Owin.Testing.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject, Version=3.0.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Ninject.3.0.1.10\lib\net35\Ninject.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="RedGate.AppHost.Client, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Client.exe</HintPath>
+    </Reference>
+    <Reference Include="RedGate.AppHost.Interfaces, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="RedGate.AppHost.Remoting.WPF, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Remoting.WPF.dll</HintPath>
+    </Reference>
+    <Reference Include="RedGate.AppHost.Server, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.AddIn.Contract" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\net40\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http, Version=2.2.13.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Extensions">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Primitives">
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest, Version=2.2.13.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.Net.Http.2.2.13\lib\net40\System.Net.Http.WebRequest.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\net40\System.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks">
+      <HintPath>..\packages\Microsoft.Bcl.1.1.7\lib\net40\System.Threading.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ApplicationDispatcher.cs" />
+    <Compile Include="BrowseScriptsPageControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chromium\ChromiumControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Chromium\IBindableToJs.cs" />
+    <Compile Include="Chromium\InterceptingRequestHandler.cs" />
+    <Compile Include="Chromium\OwinBasedFileServer.cs" />
+    <Compile Include="Chromium\PopupHandler.cs" />
+    <Compile Include="CredentialsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CredentialsFormViewModel.cs" />
+    <Compile Include="Credentials\WindowsCryptStoreCredentialsManager.cs" />
+    <Compile Include="EmbeddedResourceFileSystem\EmbeddedDirectory.cs" />
+    <Compile Include="EmbeddedResourceFileSystem\EmbeddedFile.cs" />
+    <Compile Include="EmbeddedResourceFileSystem\EmbeddedResourceFileSystemWithDirectorySupport.cs" />
+    <Compile Include="FavoriteScript.cs" />
+    <Compile Include="FavoriteScriptsStore.cs" />
+    <Compile Include="IFavoriteScriptsStore.cs" />
+    <Compile Include="IScriptSnippets.cs" />
+    <Compile Include="Credentials\ICredentialsManager.cs" />
+    <Compile Include="Credentials\SscLogin.cs" />
+    <Compile Include="DialogController.cs" />
+    <Compile Include="IDialogController.cs" />
+    <Compile Include="ISscOperations.cs" />
+    <Compile Include="JavaScriptModels\ScriptItem.cs" />
+    <Compile Include="JavaScriptModels\ScriptSnippets.cs" />
+    <Compile Include="JavaScriptModels\SscEndpoints.cs" />
+    <Compile Include="JavaScriptModels\SscOperations.cs" />
+    <Compile Include="ObjectFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QueryWindowHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScreenSelectionNotifications.cs" />
+    <Compile Include="ShareScreenSelectionEventArgs.cs" />
+    <Compile Include="SscModule.cs" />
+    <Compile Include="OutOfProcessEntryPoint.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RedGate.SSC.Windows.Analytics\RedGate.SSC.Windows.Analytics.csproj">
+      <Project>{4853C208-66A1-4410-A7C8-FF031DD20BA2}</Project>
+      <Name>RedGate.SSC.Windows.Analytics</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedGate.SSC.Windows.Logging\RedGate.SSC.Windows.Logging.csproj">
+      <Project>{79F9811D-62AA-42FB-B378-CEA329D2AD3E}</Project>
+      <Name>RedGate.SSC.Windows.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedGate.SSC.Windows.Product\RedGate.SSC.Windows.Product.csproj">
+      <Project>{AF85B320-FF40-4D62-9437-FF27516034BA}</Project>
+      <Name>RedGate.SSC.Windows.Product</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedGate.SSC.Windows.Remote.Services\RedGate.SSC.Windows.Remote.Services.csproj">
+      <Project>{daf206fd-7e65-4f3d-af2f-cfe0a1188877}</Project>
+      <Name>RedGate.SSC.Windows.Remote.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RedGate.SSC.Windows.Web.Assets\RedGate.SSC.Windows.Web.Assets.csproj">
+      <Project>{47bd11d5-6fd0-40d6-b3bf-4d48ddc5bfbe}</Project>
+      <Name>RedGate.SSC.Windows.Web.Assets</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(SolutionDir)\MSBuild\Product.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+      %25WINDIR%25\system32\xcopy /s /y "$(SolutionDir)\packages\CefSharp.WinForms.1.25.3\cef\*.*" "$(TargetDir)"
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
+  <Target Name="EnsureBclBuildImported" BeforeTargets="" Condition="'$(BclBuildImported)' == ''">
+    <Error Condition="!Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=317567." HelpKeyword="BCLBUILD2001" />
+    <Error Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" Text="The build restored NuGet packages. Build the project again to include these packages in the build. For more information, see http://go.microsoft.com/fwlink/?LinkID=317568." HelpKeyword="BCLBUILD2002" />
+  </Target>
+</Project>

@@ -1,0 +1,18 @@
+.Button {
+	background: #327CCB;
+	border: 0;
+	color: #fff;
+	cursor: pointer;
+	font-family: 'Segoe UI Semibold';
+	padding: 5px 10px;
+	text-decoration: none;
+}
+
+.Button[disabled] {
+	background: #ccc;
+}
+
+.Button--large {
+	padding: 10px 20px;
+	font-size: 1.1em;
+}

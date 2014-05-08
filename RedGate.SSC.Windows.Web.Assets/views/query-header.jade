@@ -1,0 +1,15 @@
+doctype html
+html(ng-app="sqlScripts")
+  head
+    meta(charset="utf-8")
+    title SQL Scripts
+    link(rel="stylesheet", href="/main.css")
+    script(src="/combined.js")
+  body.QueryHeader(ng-controller="QueryHeaderController")
+    .QueryHeader-text
+      p.QueryHeader-title(ng-bind="title")
+      p.QueryHeader-author(ng-bind="author")
+    .QueryHeader-actions
+      a.QueryHeader-action(ng-hide="addToFavoritesVisible") Favorited!
+      a.QueryHeader-action(ng-click="addToFavorites()", ng-show="addToFavoritesVisible") Add to favorites
+      a.QueryHeader-action(ng-href="discussUrl", target="_blank") Discuss

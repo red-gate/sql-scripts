@@ -1,0 +1,42 @@
+.Form {
+}
+
+.Form-textbox {
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	color: #333333;
+	font-size: 0.9em;
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	width: 200px;
+}
+
+.Form-textarea {
+	height: auto;
+}
+
+.Form-label {
+	display: block;
+	font-family: 'Segeo UI Semibold', sans-serif;
+	font-weight: 600;
+	margin-bottom: 4px;
+}
+
+.Form-textarea,
+.Form-checkbox,
+.Form-buttons,
+.Form-textbox {
+	margin-bottom: 20px;
+}
+
+.Form--noMargin .Form-textarea,
+.Form--noMargin .Form-checkbox,
+.Form--noMargin .Form-buttons,
+.Form--noMargin .Form-textbox {
+	margin-bottom: 0;
+}
+
+.Form-checkbox {
+	display: block;
+}

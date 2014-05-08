@@ -1,0 +1,31 @@
+.form-inline {
+  margin: 0;
+}
+
+.Search {
+  background: #fff;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px 0 10px 20px;
+}
+
+.Search-box {
+  box-sizing: border-box;
+  margin: 0 20px 0 10px;
+}
+
+.Search-input {
+  border: 1px solid #ccc;
+  box-shadow: none;
+  outline-style: none;
+  width: 100%;
+}
+
+.Search-input:focus {
+  border: 1px solid #333333;
+}
+
+.Search-input::-webkit-search-cancel-button {
+  -webkit-appearance: searchfield-cancel-button !important;
+}

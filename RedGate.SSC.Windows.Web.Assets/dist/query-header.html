@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html ng-app="sqlScripts">
+  <head>
+    <meta charset="utf-8">
+    <title>SQL Scripts</title>
+    <link rel="stylesheet" href="/main.css">
+    <script src="/combined.js"></script>
+  </head>
+  <body ng-controller="QueryHeaderController" class="QueryHeader">
+    <div class="QueryHeader-text">
+      <p ng-bind="title" class="QueryHeader-title"></p>
+      <p ng-bind="author" class="QueryHeader-author"></p>
+    </div>
+    <div class="QueryHeader-actions"><a ng-hide="addToFavoritesVisible" class="QueryHeader-action">Favorited!</a><a ng-click="addToFavorites()" ng-show="addToFavoritesVisible" class="QueryHeader-action">Add to favorites</a><a ng-href="discussUrl" target="_blank" class="QueryHeader-action">Discuss</a></div>
+  </body>
+</html>

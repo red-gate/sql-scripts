@@ -1,0 +1,42 @@
+.QueryHeader {
+	background: #f0f0f0;
+	white-space: nowrap;
+}
+
+.QueryHeader-text {
+	float: left;
+}
+
+.QueryHeader-title {
+	float: left;
+	font-family: 'Segoe UI Semibold', sans-serif;
+	font-size: 1.1em;
+	margin-right: 15px;
+	padding: 0 0 0 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.QueryHeader-author {
+	color: #666;
+	line-height: 1.9em;
+}
+
+.QueryHeader-actions {
+	background: #f0f0f0;
+	padding-left: 10px;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.QueryHeader-action {
+	color: #327CCB;
+	cursor: pointer;
+	display: inline-block;
+	font-family: 'Segoe UI', sans-serif;
+	font-weight: 600;
+	margin: 15px 15px 10px 0;
+	text-decoration: none;
+}

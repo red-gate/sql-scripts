@@ -1,0 +1,22 @@
+.LoginPopup {
+	margin: 20px;
+}
+
+.LoginPopup-title {
+	margin-bottom: 10px;
+}
+
+.LoginPopup-divider {
+	text-align: center;
+}
+
+.LoginPopup-verticalRule {
+	background: #ccc;
+	height: 50px;
+	margin: 14px auto 8px;
+	width: 1px;
+}
+
+.LoginPopup-forgotPassword {
+	margin-left: 20px;
+}

@@ -1,0 +1,30 @@
+doctype html
+html(ng-app="sqlScripts")
+  head
+    meta(charset="utf-8")
+    title SQL Scripts
+    link(rel="stylesheet", href="/main.css")
+    script(src="/combined.js")
+  body.LoginPopup(ng-controller="LoginController")
+    p To add favorites or share a script, you need to log in to your SQLServerCentral account.
+    .Grid
+      .Grid-cell.u-size5of12
+        h3.LoginPopup-title Log in to SQLServerCentral
+        form.Form(ng-submit="login()")
+          label.Form-label Email address
+          input.Form-textbox(ng-model="username", ng-disabled="!inputControlsEnabled")
+          label.Form-label Password
+          input.Form-textbox(type="password", ng-model="password", ng-disabled="!inputControlsEnabled")
+          .Form-buttons
+            button.Button(type="submit", ng-disabled="!loginEnabled()") Log in
+            a.LoginPopup-forgotPassword(href="https://www.sqlservercentral.com/ResetMyPassword", target="_blank") Forgotten your password?
+          label.Form-label(ng-show="incorrectPasswordVisible") Incorrect email address or password
+
+      .Grid-cell.u-size2of12.LoginPopup-divider
+        .LoginPopup-verticalRule
+        span or
+        .LoginPopup-verticalRule
+
+      .Grid-cell.u-size5of12
+        h3.LoginPopup-title Register an account
+        a.Button(href="http://www.sqlservercentral.com/Register", target="_blank") Register now

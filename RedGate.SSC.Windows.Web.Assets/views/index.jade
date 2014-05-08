@@ -1,0 +1,39 @@
+doctype html
+html(ng-app="sqlScripts")
+  head
+    meta(charset="utf-8")
+    title SQL Scripts
+
+    link(rel="stylesheet", href="/main.css")
+
+    script(src="/combined.js")
+  body(ng-controller="BaseController")
+    .NavigationBar
+      ul.Navigation
+        li.Navigation-item(data-menu-item)
+          a.Navigation-link(href="#/") All Scripts
+        li.Navigation-item(data-menu-item)
+          a.Navigation-link(href="#/favorites")
+            span Favorites
+            span(ng-show="favoritesUpdated > 0")
+              span  (
+              span(ng-bind="favoritesUpdated")
+              span )
+        li.Navigation-item(data-menu-item)
+          a.Navigation-link(href="#/contribute") Contribute
+
+      ul.Login
+        li
+          span(ng-show="isLoggedIn")
+            span(ng-bind="username")
+            |  (
+            a.Login-link(ng-click="doLogout()") Logout
+            | )
+          a.Login-link(ng-show="!isLoggedIn" ng-click="doLogin()") Log in
+    ng-view
+
+    .Loading-backdrop(ng-class="{'is-loaded': loading.pageLoaded }")
+    .Loading.Loading--page(ng-class="{'is-loaded': loading.pageLoaded }")
+        .Loading-item
+        .Loading-item
+        .Loading-item
