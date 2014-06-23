@@ -95,7 +95,7 @@ namespace RedGate.SSC.Windows.Client.Chromium
         /// <param name="url"></param>
         public void NavigateToUrl(string url)
         {
-            m_WebView.Load(url);
+            m_WebView.Load(AddInternalDomain(url));
         }
 
         protected override void Dispose(bool disposing)

@@ -9,7 +9,7 @@ namespace RedGate.SSC.Windows.Client
     {
         public CredentialsForm()
         {
-            Controls.Add(new ChromiumControl("http://localhost:1337/login.html", new CredentialsFormViewModel(), new SscEndpoints())
+            Controls.Add(new ChromiumControl("login.html", new CredentialsFormViewModel(), new SscEndpoints())
                              {
                                  Dock = DockStyle.Fill
                              });

@@ -34,7 +34,7 @@ namespace RedGate.SSC.Windows.Client
         public void ShowShare(string script)
         {
             var snippetId  = m_ScriptSnippets.RegisterScriptSnippet(Guid.NewGuid(), script);
-            m_ChromiumControl.NavigateToUrl(string.Format("http://localhost:1337/contribute/{0}", snippetId));
+            m_ChromiumControl.NavigateToUrl(string.Format("contribute/{0}", snippetId));
         }
     }
 }

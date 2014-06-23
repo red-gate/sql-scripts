@@ -15,7 +15,7 @@ namespace RedGate.SSC.Windows.Client
 
         private QueryWindowHeader(ISscOperations sscOperations, ScriptItem scriptItem)
         {
-            Controls.Add(new ChromiumControl("http://localhost:1337/query-header.html", sscOperations, scriptItem, new SscEndpoints())
+            Controls.Add(new ChromiumControl("query-header.html", sscOperations, scriptItem, new SscEndpoints())
             {
                 Dock = DockStyle.Fill
             });
