@@ -24,12 +24,12 @@ html(ng-app="sqlScripts")
 
       ul.Login
         li
-          span(ng-show="isLoggedIn")
-            span(ng-bind="username")
+          span(ng-show="auth.isLoggedIn")
+            span(ng-bind="auth.username")
             |  (
             a.Login-link(ng-click="doLogout()") Logout
             | )
-          a.Login-link(ng-show="!isLoggedIn" ng-click="doLogin()") Log in
+          a.Login-link(ng-show="!auth.isLoggedIn" ng-click="doLogin()") Log in
     ng-view
 
     .Loading-backdrop(ng-class="{'is-loaded': loading.pageLoaded }")

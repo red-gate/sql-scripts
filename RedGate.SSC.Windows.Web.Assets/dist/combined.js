@@ -398,9 +398,7 @@ app.config(function($routeProvider, $locationProvider) {
       });
 });
 
-},{"./controllers":4,"./directives":8,"./services":18,"angular":"6SrAwF","angular-route":"nkLrvo"}],"angular-route":[function(require,module,exports){
-module.exports=require('nkLrvo');
-},{}],"nkLrvo":[function(require,module,exports){
+},{"./controllers":4,"./directives":8,"./services":18,"angular":"6SrAwF","angular-route":"nkLrvo"}],"nkLrvo":[function(require,module,exports){
 (function (global){
 (function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 
@@ -1331,8 +1329,8 @@ function ngViewFillContentFactory($compile, $controller, $route) {
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"angular":"6SrAwF"}],"angular":[function(require,module,exports){
-module.exports=require('6SrAwF');
+},{"angular":"6SrAwF"}],"angular-route":[function(require,module,exports){
+module.exports=require('nkLrvo');
 },{}],"6SrAwF":[function(require,module,exports){
 (function (global){
 (function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
@@ -21901,6 +21899,8 @@ var styleDirective = valueFn({
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{}],"angular":[function(require,module,exports){
+module.exports=require('6SrAwF');
 },{}],15:[function(require,module,exports){
 'use strict';
 

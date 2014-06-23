@@ -14,7 +14,7 @@
         <li data-menu-item class="Navigation-item"><a href="#/contribute" class="Navigation-link">Contribute</a></li>
       </ul>
       <ul class="Login">
-        <li><span ng-show="isLoggedIn"><span ng-bind="username"></span> (<a ng-click="doLogout()" class="Login-link">Logout</a>)</span><a ng-show="!isLoggedIn" ng-click="doLogin()" class="Login-link">Log in</a></li>
+        <li><span ng-show="auth.isLoggedIn"><span ng-bind="auth.username"></span> (<a ng-click="doLogout()" class="Login-link">Logout</a>)</span><a ng-show="!auth.isLoggedIn" ng-click="doLogin()" class="Login-link">Log in</a></li>
       </ul>
     </div>
     <ng-view></ng-view>
