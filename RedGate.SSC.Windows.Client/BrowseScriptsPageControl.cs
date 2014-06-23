@@ -28,7 +28,7 @@ namespace RedGate.SSC.Windows.Client
         //a hack to update the views as we can't have ShowDialog() that would cause it to block and allow us to use callbacks
         private void OnCredentialsChanged(object sender, EventArgs eventArgs)
         {
-            m_ChromiumControl.EvaluateJavaScript("ko.contextFor(window.document.body).$root.updateLoggedInUser()");
+            //TODO: Update the Angular app state. Use signalr?
         }
 
         public void ShowShare(string script)
