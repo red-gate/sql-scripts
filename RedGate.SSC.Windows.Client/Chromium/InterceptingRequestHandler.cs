@@ -3,11 +3,15 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using CefSharp;
+using log4net;
+using log4net.Core;
 
 namespace RedGate.SSC.Windows.Client.Chromium
 {
     internal class InterceptingRequestHandler : IRequestHandler
     {
+        private static readonly ILog s_Logger = ObjectFactory.Get<ILog>();
+
         private readonly string m_InternalDomain;
         private readonly Func<string, HttpResponseMessage> m_Server;
 
@@ -68,6 +72,7 @@ namespace RedGate.SSC.Windows.Client.Chromium
         public bool GetAuthCredentials(IWebBrowser browser, bool isProxy, string host, int port, string realm, string scheme,
             ref string username, ref string password)
         {
+            s_Logger.Debug("Authenticaion credentials have been requested, does this happen when proxy details are needed?");
             return false;
         }
     }
