@@ -29,6 +29,7 @@ namespace RedGate.SSC.Windows.Client
         private void OnCredentialsChanged(object sender, EventArgs eventArgs)
         {
             //TODO: Update the Angular app state. Use signalr?
+            m_ChromiumControl.EvaluateJavaScript("window.location.reload()");
         }
 
         public void ShowShare(string script)
