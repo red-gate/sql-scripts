@@ -130,6 +130,15 @@
   <data name="CredentialsFormTitle" xml:space="preserve">
     <value>Log in to SQLServerCentral</value>
   </data>
+  <data name="ProductAuthor" xml:space="preserve">
+    <value>SQLServerCentral</value>
+  </data>
+  <data name="ProductDescription" xml:space="preserve">
+    <value>SQL Scripts provides access to SQLServerCentral scripts from Management Studio</value>
+  </data>
+  <data name="ProductHomePage" xml:space="preserve">
+    <value>http://www.sqlservercentral.com</value>
+  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ProductIcon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>ProductIcon.ico;System.Drawing.Icon, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

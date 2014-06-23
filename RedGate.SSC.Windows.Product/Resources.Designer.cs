@@ -97,6 +97,33 @@ namespace RedGate.SSC.Windows.Product {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to SQLServerCentral.
+        /// </summary>
+        public static string ProductAuthor {
+            get {
+                return ResourceManager.GetString("ProductAuthor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to SQL Scripts provides access to SQLServerCentral scripts from Management Studio.
+        /// </summary>
+        public static string ProductDescription {
+            get {
+                return ResourceManager.GetString("ProductDescription", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to http://www.sqlservercentral.com.
+        /// </summary>
+        public static string ProductHomePage {
+            get {
+                return ResourceManager.GetString("ProductHomePage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         public static System.Drawing.Icon ProductIcon {

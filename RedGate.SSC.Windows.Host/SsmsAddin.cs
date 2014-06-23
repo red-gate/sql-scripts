@@ -101,14 +101,31 @@ namespace RedGate.SSC.Windows.Host
             get
             {
                 Version version = TheProduct.Version;
-                return string.Format("{0} {1}.{2}", TheProduct.Name, version.Major, version.Minor);
+                return string.Format("{0}.{1}", version.Major, version.Minor);
             }
         }
 
-        public string Description { get; private set; }
-        public string Name { get; private set; }
-        public string Author { get; private set; }
-        public string Url { get; private set; }
+        public string Description
+        {
+            get { return Resources.ProductDescription; }
+        }
+
+        public string Name
+        {
+            get { return TheProduct.Name; }
+        }
+
+        public string Author
+        {
+            get { return Resources.ProductAuthor; }
+            
+        }
+
+        public string Url
+        {
+            get { return Resources.ProductHomePage; }
+        }
+
         public void OnShutdown()
         {
         }
