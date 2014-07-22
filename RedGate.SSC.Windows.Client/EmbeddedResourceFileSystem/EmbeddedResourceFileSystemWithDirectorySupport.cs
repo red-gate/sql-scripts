@@ -9,7 +9,7 @@ namespace RedGate.SSC.Windows.Client.EmbeddedResourceFileSystem
 {
     /// <summary>
     /// This tries to map all embedded resources back to a nest structure as it would have existed
-    /// on the file system. Very niave, assumes all '.' characters are Directory separators, except
+    /// on the file system. Very naive, assumes all '.' characters are Directory separators, except
     /// for final which will become the file extension separator
     /// </summary>
     internal class EmbeddedResourceFileSystemWithDirectorySupport : IFileSystem
