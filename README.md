@@ -19,7 +19,7 @@ You need to make an entry in the Registry to tell our SIPframework where to load
 
 Create a new String Value (REG_SZ) with a unique name and set the value to the path of the sample's RedGate.SSC.Windows.Host.dll.
 
-For example: D:\CurrentProjects\SQLScripts\Build\Debug\SampleSsmsEcosystemAddin.dll
+For example: D:\CurrentProjects\SQLScripts\Build\Debug\RedGate.SSC.Windows.Host.dll
 
 ###Step 4: Start SSMS###
 You should see SQL Scripts in the toolbar. If not see trouble-shooting an add-in.
