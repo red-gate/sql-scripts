@@ -5,12 +5,12 @@
 }
 
 .FeaturedScript {
-    height: 200px;
     padding: 15px;
     position: relative;
     padding-left: 180px;
     background-color: #F7F7F7;
-    width: calc(75% - 7.5px);
+    min-width: 500px;
+    max-width: 1000px;
     margin-bottom: 15px;   
 }
 
@@ -22,9 +22,6 @@
 }
 
 .FeaturedScript-button {
-    position: absolute;
-    bottom: 16px;
-    left: 180px;
     margin: 0;
 }
 
