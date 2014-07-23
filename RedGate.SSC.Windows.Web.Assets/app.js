@@ -15,8 +15,11 @@ var app = angular.module('sqlScripts', [
 ]);
 
 app.config(function($routeProvider, $locationProvider) {
-  $routeProvider
+    $routeProvider
       .when('/', {
+            redirectTo: '/featured'
+      })
+      .when('/all', {
         templateUrl: '/views/scripts.html',
         controller: 'ScriptsController'
       })
