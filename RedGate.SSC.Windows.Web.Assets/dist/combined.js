@@ -187,6 +187,28 @@ function FavoritesController($scope, operations, scripts) {
 }
 
 },{}],4:[function(require,module,exports){
+
+FeaturedController.$inject = ['$scope'];
+
+function FeaturedController($scope) {
+    var script = function(title, author, description) {
+        this.title = title;
+        this.author = author;
+        this.description = description;
+        this.imageSrc = '//placehold.it/100x170';
+    }
+    $scope.scripts = [
+        new script('foo', 'bar', 'baz')
+    ];
+
+    $scope.loading.isLoading = true;
+    $scope.loading.isLoading = false;
+    $scope.loading.pageLoaded = true;
+}
+
+module.exports = FeaturedController;
+
+},{}],5:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -197,9 +219,10 @@ angular.module('sqlScripts.controllers', [])
   .controller('FavoritesController', require('./favorites'))
   .controller('ContributeController', require('./contribute'))
   .controller('QueryHeaderController', require('./query-header'))
+  .controller('FeaturedController', require('./featured'))
   .controller('LoginController', require('./login'));
 
-},{"./base":1,"./contribute":2,"./favorites":3,"./login":5,"./query-header":6,"./scripts":7,"angular":"6SrAwF"}],5:[function(require,module,exports){
+},{"./base":1,"./contribute":2,"./favorites":3,"./featured":4,"./login":6,"./query-header":7,"./scripts":8,"angular":"6SrAwF"}],6:[function(require,module,exports){
 'use strict';
 
 module.exports = LoginController;
@@ -234,7 +257,7 @@ function LoginController($scope, $http, $log, endpoints, credentials) {
   };
 }
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 'use strict';
 
 module.exports = QueryHeaderController;
@@ -254,7 +277,7 @@ function QueryHeaderController($scope, scriptItem, favorites) {
   };
 }
 
-},{}],7:[function(require,module,exports){
+},{}],8:[function(require,module,exports){
 'use strict';
 
 module.exports = ScriptsController;
@@ -338,7 +361,7 @@ function ScriptsController($scope, utils, scripts, favorites) {
   });
 }
 
-},{}],8:[function(require,module,exports){
+},{}],9:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -346,7 +369,7 @@ var angular = require('angular');
 angular.module('sqlScripts.directives', [])
   .directive('menuItem', require('./menu-item'));
 
-},{"./menu-item":9,"angular":"6SrAwF"}],9:[function(require,module,exports){
+},{"./menu-item":10,"angular":"6SrAwF"}],10:[function(require,module,exports){
 'use strict';
 
 module.exports = menuItem;
@@ -365,7 +388,7 @@ function menuItem($rootScope, $location) {
   };
 }
 
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -388,6 +411,10 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/views/scripts.html',
         controller: 'ScriptsController'
       })
+      .when('/featured', {
+        templateUrl: '/views/featured.html',
+        controller: 'FeaturedController'
+      })
       .when('/favorites', {
         templateUrl: '/views/favorites.html',
         controller: 'FavoritesController'
@@ -398,7 +425,7 @@ app.config(function($routeProvider, $locationProvider) {
       });
 });
 
-},{"./controllers":4,"./directives":8,"./services":18,"angular":"6SrAwF","angular-route":"nkLrvo"}],"nkLrvo":[function(require,module,exports){
+},{"./controllers":5,"./directives":9,"./services":19,"angular":"6SrAwF","angular-route":"nkLrvo"}],"nkLrvo":[function(require,module,exports){
 (function (global){
 (function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
 
@@ -21901,7 +21928,7 @@ var styleDirective = valueFn({
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],"angular":[function(require,module,exports){
 module.exports=require('6SrAwF');
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -21924,7 +21951,7 @@ function Credentials($log) {
   };
 };
 
-},{}],16:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -21969,7 +21996,7 @@ Endpoints.prototype.getListScriptsEndpoint = function() {
 
 module.exports = Endpoints;
 
-},{}],17:[function(require,module,exports){
+},{}],18:[function(require,module,exports){
 'use strict';
 
 module.exports = Favorites;
@@ -22001,7 +22028,7 @@ Favorites.prototype.addToFavorites = function(scriptId) {
   return result.promise;
 };
 
-},{}],18:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -22016,7 +22043,7 @@ angular.module('sqlScripts.services', [])
   .service('credentials', require('./credentials'))
   .service('utils', require('./utils'));
 
-},{"./credentials":15,"./endpoints":16,"./favorites":17,"./operations":19,"./script-item":20,"./script-snippet":21,"./scripts":22,"./utils":23,"angular":"6SrAwF"}],19:[function(require,module,exports){
+},{"./credentials":16,"./endpoints":17,"./favorites":18,"./operations":20,"./script-item":21,"./script-snippet":22,"./scripts":23,"./utils":24,"angular":"6SrAwF"}],20:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -22061,7 +22088,7 @@ Operations.prototype.setFavorite = function(itemId) {
 
 module.exports = Operations;
 
-},{}],20:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -22081,7 +22108,7 @@ module.exports = function() {
   };
 };
 
-},{}],21:[function(require,module,exports){
+},{}],22:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -22099,7 +22126,7 @@ module.exports = function () {
     }
   };
 };
-},{}],22:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict';
 
 module.exports = Scripts;
@@ -22218,7 +22245,7 @@ Scripts.prototype.submitScript = function(script) {
   });
 }
 
-},{}],23:[function(require,module,exports){
+},{}],24:[function(require,module,exports){
 'use strict';
 
 module.exports = function() {
@@ -22236,4 +22263,4 @@ module.exports = function() {
   };
 };
 
-},{}]},{},[10])
+},{}]},{},[11])

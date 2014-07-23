@@ -1,0 +1,32 @@
+﻿.FeaturedScript-container {
+    overflow: auto;
+    height: 100%;
+}
+
+.FeaturedScript {
+    height: 200px;
+    padding: 15px;
+    position: relative;
+    padding-left: 130px;
+    margin-left: 10px;
+}
+
+.FeaturedScript-image {
+    position: absolute;
+    left: 15px;   
+}
+
+.FeaturedScript-button {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    margin: 0;
+}
+
+.FeaturedScript-title {
+    margin-bottom: 0;
+}
+
+.FeaturedScript-author {
+    margin-top: 0;
+}

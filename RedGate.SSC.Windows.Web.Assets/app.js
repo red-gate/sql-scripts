@@ -20,6 +20,10 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/views/scripts.html',
         controller: 'ScriptsController'
       })
+      .when('/featured', {
+        templateUrl: '/views/featured.html',
+        controller: 'FeaturedController'
+      })
       .when('/favorites', {
         templateUrl: '/views/favorites.html',
         controller: 'FavoritesController'

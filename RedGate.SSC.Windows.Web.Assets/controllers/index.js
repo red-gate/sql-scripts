@@ -8,4 +8,5 @@ angular.module('sqlScripts.controllers', [])
   .controller('FavoritesController', require('./favorites'))
   .controller('ContributeController', require('./contribute'))
   .controller('QueryHeaderController', require('./query-header'))
+  .controller('FeaturedController', require('./featured'))
   .controller('LoginController', require('./login'));
