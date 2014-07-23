@@ -1,12 +1,8 @@
 
 <div class="FeaturedScript-container">
-  <div ng-repeat="script in scripts" class="Grid Grid--alignLeft">
-    <div class="Grid-cell u-size7of12">
-      <div class="FeaturedScript"><img ng-src="{{scripts[$index].imageSrc}}" class="FeaturedScript-image"/>
-        <h3 ng-bind="scripts[{{$index}}].title" class="FeaturedScript-title"></h3>
-        <p ng-bind="scripts[{{$index}}].author" class="FeaturedScript-author"></p>
-        <p ng-bind="scripts[{{$index}}].description" class="FeaturedScript-description"></p><a class="Button Script-button FeaturedScript-button">Open</a>
-      </div>
-    </div>
+  <div ng-repeat="script in scripts" class="FeaturedScript"><img ng-src="{{scripts[$index].imageSrc}}" class="FeaturedScript-image"/>
+    <h3 ng-bind="scripts[{{$index}}].title" class="FeaturedScript-title"></h3>
+    <p ng-bind="scripts[{{$index}}].author" class="FeaturedScript-author"></p>
+    <p ng-bind="scripts[{{$index}}].description" class="FeaturedScript-description"></p><a class="Button Script-button FeaturedScript-button">Open</a>
   </div>
 </div>

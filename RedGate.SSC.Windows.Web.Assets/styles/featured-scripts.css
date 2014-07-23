@@ -1,25 +1,30 @@
 ﻿.FeaturedScript-container {
     overflow: auto;
     height: 100%;
+    margin: 15px;
 }
 
 .FeaturedScript {
     height: 200px;
     padding: 15px;
     position: relative;
-    padding-left: 130px;
-    margin-left: 10px;
+    padding-left: 180px;
+    background-color: #F7F7F7;
+    width: calc(75% - 7.5px);
+    margin-bottom: 15px;   
 }
 
 .FeaturedScript-image {
     position: absolute;
-    left: 15px;   
+    left: 15px;
+    width: 150px;
+    height: 170px;
 }
 
 .FeaturedScript-button {
     position: absolute;
     bottom: 16px;
-    right: 16px;
+    left: 180px;
     margin: 0;
 }
 
