@@ -12,4 +12,4 @@ html(ng-app="sqlScripts")
     .QueryHeader-actions
       a.QueryHeader-action(ng-hide="addToFavoritesVisible") Favorited!
       a.QueryHeader-action(ng-click="addToFavorites()", ng-show="addToFavoritesVisible") Add to favorites
-      a.QueryHeader-action(ng-href="discussUrl", target="_blank") Discuss
+      a.QueryHeader-action(ng-href="{{discussUrl}}", target="_blank") Discuss
