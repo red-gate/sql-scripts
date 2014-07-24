@@ -1,6 +1,6 @@
 ﻿.FeaturedScript-container {
     overflow: auto;
-    height: 100%;
+    height: 90%;
     margin: 15px;
 }
 
@@ -11,6 +11,7 @@
     background-color: #F7F7F7;
     min-width: 500px;
     max-width: 1000px;
+    min-height: 200px;
     margin-bottom: 15px;   
 }
 
@@ -19,6 +20,7 @@
     left: 15px;
     width: 150px;
     height: 170px;
+    object-fit: contain;
 }
 
 .FeaturedScript-button {
