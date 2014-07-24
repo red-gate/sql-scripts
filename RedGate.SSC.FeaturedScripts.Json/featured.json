@@ -8,11 +8,11 @@
             "scriptId": 62380
         },
         {
-            "title": "",
-            "author": "",
-            "description": "",
+            "title": "List Unused Tables and Indexes",
+            "author": "Louis Davidson and Tim Ford",
+            "description": "Finds tables and indexes that do not show up in the usage statistics.",
             "imageSrc": "",
-            "scriptId": 123
+            "scriptId": 71994
         },
         {
             "title": "",
