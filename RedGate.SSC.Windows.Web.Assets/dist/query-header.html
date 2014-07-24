@@ -11,6 +11,6 @@
       <p ng-bind="title" class="QueryHeader-title"></p>
       <p ng-bind="author" class="QueryHeader-author"></p>
     </div>
-    <div class="QueryHeader-actions"><a ng-hide="addToFavoritesVisible" class="QueryHeader-action">Favorited!</a><a ng-click="addToFavorites()" ng-show="addToFavoritesVisible" class="QueryHeader-action">Add to favorites</a><a ng-href="discussUrl" target="_blank" class="QueryHeader-action">Discuss</a></div>
+    <div class="QueryHeader-actions"><a ng-hide="addToFavoritesVisible" class="QueryHeader-action">Favorited!</a><a ng-click="addToFavorites()" ng-show="addToFavoritesVisible" class="QueryHeader-action">Add to favorites</a><a ng-href="{{discussUrl}}" target="_blank" class="QueryHeader-action">Discuss</a></div>
   </body>
 </html>
