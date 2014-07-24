@@ -50,6 +50,7 @@
     <None Include="package.json" />
     <None Include="Views\contribute.jade" />
     <None Include="Views\favorites.jade" />
+    <None Include="Views\featured.jade" />
     <None Include="Views\index.jade" />
     <None Include="Views\login.jade" />
     <None Include="Views\query-header.jade" />
@@ -62,6 +63,7 @@
     <Content Include="controllers\base.js" />
     <Content Include="controllers\contribute.js" />
     <Content Include="controllers\favorites.js" />
+    <Content Include="controllers\featured.js" />
     <Content Include="controllers\index.js" />
     <Content Include="controllers\login.js" />
     <Content Include="controllers\query-header.js" />
@@ -74,6 +76,7 @@
     <EmbeddedResource Include="dist\views\contribute.html" />
     <EmbeddedResource Include="dist\views\favorites.html" />
     <EmbeddedResource Include="dist\views\scripts.html" />
+    <EmbeddedResource Include="dist\views\featured.html" />
     <Content Include="images\star.svg" />
     <Content Include="Scripts\angular-route.js" />
     <Content Include="Scripts\angular.js" />
@@ -99,6 +102,7 @@
     <Content Include="Styles\loading.css" />
     <Content Include="Styles\login-popup.css" />
     <Content Include="Styles\sidebar.css" />
+    <Content Include="Styles\featured-scripts.css" />
     <Content Include="Styles\suit\grid.css" />
     <Content Include="Styles\suit\size.css" />
     <EmbeddedResource Include="dist\main.css" />

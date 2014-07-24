@@ -1,0 +1,7 @@
+﻿.FeaturedScript-container
+    .FeaturedScript(ng-repeat="script in scripts")
+        img.FeaturedScript-image(ng-src="{{scripts[$index].imageSrc}}")
+        h3.FeaturedScript-title(ng-bind="scripts[{{$index}}].title")
+        p.FeaturedScript-author(ng-bind="scripts[{{$index}}].author")
+        p.FeaturedScript-description(ng-bind="scripts[{{$index}}].description")
+        a.Button.Script-button.FeaturedScript-button(ng-click="open(scripts[$index].scriptId)") Open

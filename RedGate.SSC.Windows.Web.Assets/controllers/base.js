@@ -20,7 +20,7 @@ function BaseController($scope, $http, $timeout, operations, endpoints) {
     } else {
       $scope.auth.isLoggedIn = false;
       $scope.auth.username = '';
-      $http.defaults.headers.common = {};
+      delete $http.defaults.headers.common.Authorization;
     }
   };
 
