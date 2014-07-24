@@ -192,7 +192,7 @@ FeaturedController.$inject = ['$scope', '$http', '$log'];
 
 function FeaturedController($scope, $http, $log) {
     $scope.loading.isLoading = true;
-    $http.get('https://regardtest.blob.core.windows.net/temp/Foo.json').success(function (data) {
+    $http.get('http://www.red-gate.com/products/sql-server-central/plugin/featured').success(function (data) {
         $scope.loading.isLoading = false;
         $scope.loading.pageLoaded = true;
 
