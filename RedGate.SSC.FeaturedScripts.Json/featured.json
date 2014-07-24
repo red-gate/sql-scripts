@@ -16,10 +16,10 @@
         },
         {
             "title": "Another Script",
-            "author": "",
-            "description": "",
-            "imageSrc": "",
-            "scriptId": 123
+            "author": "Kevin Boyle",
+            "description": "This is a test",
+            "imageSrc": "http://photos1.meetupstatic.com/photos/member/7/4/a/6/member_98549862.jpeg",
+            "scriptId": 62380
         },
         {
             "title": "",
