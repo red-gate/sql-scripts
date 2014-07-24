@@ -6,7 +6,7 @@ function FeaturedController($scope, $http, $log, scripts) {
 
     //This is a little bit of a hack. We are about to send a request to an external service, make sure we don't send auth
     var auth = $http.defaults.headers.common.Authorization;
-    $http.defaults.headers.common = {};
+    delete $http.defaults.headers.common.Authorization;
 
     $http.get('http://www.red-gate.com/products/sql-server-central/plugin/featured').success(function (data) {
         $scope.loading.isLoading = false;
