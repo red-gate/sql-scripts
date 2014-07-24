@@ -4,4 +4,4 @@
         h3.FeaturedScript-title(ng-bind="scripts[{{$index}}].title")
         p.FeaturedScript-author(ng-bind="scripts[{{$index}}].author")
         p.FeaturedScript-description(ng-bind="scripts[{{$index}}].description")
-        a.Button.Script-button.FeaturedScript-button Open
+        a.Button.Script-button.FeaturedScript-button(ng-click="open(scripts[$index].scriptId)") Open

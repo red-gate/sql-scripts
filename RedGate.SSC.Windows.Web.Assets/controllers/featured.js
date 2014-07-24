@@ -1,7 +1,7 @@
 ﻿
-FeaturedController.$inject = ['$scope', '$http', '$log'];
+FeaturedController.$inject = ['$scope', '$http', '$log', 'scripts'];
 
-function FeaturedController($scope, $http, $log) {
+function FeaturedController($scope, $http, $log, scripts) {
     $scope.loading.isLoading = true;
     $http.get('http://www.red-gate.com/products/sql-server-central/plugin/featured').success(function (data) {
         $scope.loading.isLoading = false;
@@ -13,6 +13,10 @@ function FeaturedController($scope, $http, $log) {
         $scope.loading.isLoading = false;
         $scope.loading.pageLoaded = true;
     });
+
+    $scope.open = function (scriptId) {
+        scripts.openScript(scriptId);
+    };
 }
 
 module.exports = FeaturedController;
