@@ -23193,7 +23193,7 @@ function menuItem($rootScope, $location) {
     link: function(scope, element, attrs) {
       var path = element.find('a').attr('href');
       $rootScope.$on('$locationChangeStart', function(event, next, current) {
-        element.toggleClass('is-active', path === $location.path());
+        element.toggleClass('is-active', path.slice(1, path.length) === $location.path());
       });
     }
   };
