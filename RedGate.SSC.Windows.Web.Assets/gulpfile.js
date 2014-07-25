@@ -54,11 +54,11 @@ gulp.task('js', function() {
       .pipe(browserify({
         shim: {
           angular: {
-              path: 'scripts/angular.js',
+              path: 'bower_components/angular/angular.js',
               exports: 'angular'
           },
           'angular-route': {
-              path: 'scripts/angular-route.js',
+              path: 'bower_components/angular-route/angular-route.js',
               exports: 'ngRoute',
               depends: {
                   angular: 'angular'
