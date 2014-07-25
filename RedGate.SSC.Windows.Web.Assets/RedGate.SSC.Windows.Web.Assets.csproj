@@ -78,8 +78,6 @@
     <EmbeddedResource Include="dist\views\scripts.html" />
     <EmbeddedResource Include="dist\views\featured.html" />
     <Content Include="images\star.svg" />
-    <Content Include="Scripts\easter-egg\asteroids.js" />
-    <Content Include="Scripts\easter-egg\konami.js" />
     <Content Include="services\credentials.js" />
     <Content Include="services\endpoints.js" />
     <Content Include="services\favorites.js" />
