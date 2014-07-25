@@ -47,6 +47,7 @@
     <Compile Include="AssetsAssembly.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="bower.json" />
     <None Include="package.json" />
     <None Include="views\contribute.jade" />
     <None Include="views\favorites.jade" />
