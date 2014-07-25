@@ -48,13 +48,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="package.json" />
-    <None Include="Views\contribute.jade" />
-    <None Include="Views\favorites.jade" />
-    <None Include="Views\featured.jade" />
-    <None Include="Views\index.jade" />
-    <None Include="Views\login.jade" />
-    <None Include="Views\query-header.jade" />
-    <None Include="Views\scripts.jade" />
+    <None Include="views\contribute.jade" />
+    <None Include="views\favorites.jade" />
+    <None Include="views\featured.jade" />
+    <None Include="views\index.jade" />
+    <None Include="views\login.jade" />
+    <None Include="views\query-header.jade" />
+    <None Include="views\scripts.jade" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="dist\easter-egg\asteroids.js" />
@@ -87,30 +87,30 @@
     <Content Include="services\script-snippet.js" />
     <Content Include="services\scripts.js" />
     <Content Include="services\utils.js" />
-    <Content Include="Styles\grid.css" />
-    <Content Include="Styles\query-header.css" />
-    <Content Include="Styles\stars.css" />
+    <Content Include="styles\grid.css" />
+    <Content Include="styles\query-header.css" />
+    <Content Include="styles\stars.css" />
     <Content Include="gulpfile.js" />
-    <Content Include="Styles\alert.css" />
-    <Content Include="Styles\login.css" />
+    <Content Include="styles\alert.css" />
+    <Content Include="styles\login.css" />
     <EmbeddedResource Include="dist\combined.js" />
-    <Content Include="Styles\form.css" />
-    <Content Include="Styles\loading.css" />
-    <Content Include="Styles\login-popup.css" />
-    <Content Include="Styles\sidebar.css" />
-    <Content Include="Styles\featured-scripts.css" />
-    <Content Include="Styles\suit\grid.css" />
-    <Content Include="Styles\suit\size.css" />
+    <Content Include="styles\form.css" />
+    <Content Include="styles\loading.css" />
+    <Content Include="styles\login-popup.css" />
+    <Content Include="styles\sidebar.css" />
+    <Content Include="styles\featured-scripts.css" />
+    <Content Include="styles\suit\grid.css" />
+    <Content Include="styles\suit\size.css" />
     <EmbeddedResource Include="dist\main.css" />
-    <Content Include="Styles\base.css" />
-    <Content Include="Styles\button.css" />
-    <Content Include="Styles\main.css" />
-    <Content Include="Styles\navigation.css" />
-    <Content Include="Styles\normalize.css" />
-    <Content Include="Styles\pagination.css" />
-    <Content Include="Styles\script-list.css" />
-    <Content Include="Styles\script.css" />
-    <Content Include="Styles\search.css" />
+    <Content Include="styles\base.css" />
+    <Content Include="styles\button.css" />
+    <Content Include="styles\main.css" />
+    <Content Include="styles\navigation.css" />
+    <Content Include="styles\normalize.css" />
+    <Content Include="styles\pagination.css" />
+    <Content Include="styles\script-list.css" />
+    <Content Include="styles\script.css" />
+    <Content Include="styles\search.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
