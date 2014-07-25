@@ -1,0 +1,13 @@
+{
+  "name": "RedGate.SSC.Windows.Web.Assets",
+  "version": "0.0.0",
+  "homepage": "https://github.com/red-gate/sql-scripts",
+  "authors": [
+    "Kevin Boyle <kevin.boyle@outlook.com>"
+  ],
+  "license": "Apache",
+  "private": true,
+  "dependencies": {
+    "angular-highlightjs": "~0.3.0"
+  }
+}

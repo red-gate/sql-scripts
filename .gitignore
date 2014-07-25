@@ -109,3 +109,4 @@ UpgradeLog*.XML
 
 build/**
 node_modules
+RedGate.SSC.Windows.Web.Assets/bower_components/**
