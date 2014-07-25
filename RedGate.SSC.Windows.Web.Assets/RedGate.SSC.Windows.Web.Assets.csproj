@@ -115,8 +115,6 @@
     <Content Include="Styles\script-list.css" />
     <Content Include="Styles\script.css" />
     <Content Include="Styles\search.css" />
-    <EmbeddedResource Include="Scripts\highlight.js\highlight.js" />
-    <EmbeddedResource Include="Scripts\highlight.js\styles\github.css" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
