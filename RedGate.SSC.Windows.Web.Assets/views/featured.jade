@@ -1,6 +1,6 @@
 ﻿.FeaturedScript-container
     .FeaturedScript(ng-repeat="script in scripts")
-        img.FeaturedScript-image(ng-src="{{scripts[$index].imageSrc}}")
+        .FeaturedScript-image(style="background-image: url('{{scripts[$index].imageSrc}}');")
         h3.FeaturedScript-title(ng-bind="scripts[{{$index}}].title")
         p.FeaturedScript-author(ng-bind="scripts[{{$index}}].author")
         p.FeaturedScript-description(ng-bind="scripts[{{$index}}].description")

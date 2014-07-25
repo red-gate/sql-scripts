@@ -20,7 +20,7 @@
     left: 15px;
     width: 150px;
     height: 170px;
-    object-fit: contain;
+    background-size: cover;
 }
 
 .FeaturedScript-button {
