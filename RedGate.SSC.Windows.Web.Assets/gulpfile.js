@@ -1,3 +1,4 @@
+/// <reference path="bower_components/highlightjs/highlight.pack.js" />
 'use strict';
 
 var gulp = require('gulp'),
@@ -46,7 +47,7 @@ gulp.task('js', function() {
 
     gulp.src('scripts/easter-egg/asteroids.js')
       .pipe(gulp.dest('dist/easter-egg')),
-
+	
     gulp.src([
         'app.js'
       ])
@@ -61,6 +62,18 @@ gulp.task('js', function() {
               exports: 'ngRoute',
               depends: {
                   angular: 'angular'
+              }
+          },
+          hljs: {
+                path: 'bower_components/highlightjs/highlight.pack.js',
+                exports: 'hljs'
+          },
+          'angular-hljs': {
+              path: 'bower_components/angular-highlightjs/angular-highlightjs.min.js',
+              exports: 'angularhljs',
+              depends: {
+                  angular: 'angular',
+                  hljs: 'hljs'
               }
           }
         }

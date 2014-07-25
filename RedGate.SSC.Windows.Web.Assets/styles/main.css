@@ -3,7 +3,7 @@
 
 @import "grid.css";
 @import "suit/size.css";
-@import "../scripts/highlight.js/styles/github.css";
+@import "../bower_components/highlightjs/styles/github.css";
 
 @import "form.css";
 @import "button.css";
