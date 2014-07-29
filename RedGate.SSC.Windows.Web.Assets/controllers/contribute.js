@@ -1,21 +1,10 @@
 'use strict';
 
-ContributeController.$inject = ['$scope', 'operations', 'scripts', 'scriptSnippet'];
+ContributeController.$inject = ['$scope', 'operations', 'scripts', 'scriptSnippet', '$routeParams'];
 
 module.exports = ContributeController;
 
-function ContributeController($scope, operations, scripts, scriptSnippet) {
-  $scope.getParameterByName = function (name) {
-    name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
-    var regexS = "[\\?&]" + name + "=([^&#]*)";
-    var regex = new RegExp(regexS);
-    var results = regex.exec(window.location.href);
-    if (results === null)
-      return "";
-    else
-      return decodeURIComponent(results[1].replace(/\+/g, " "));
-  };
-
+function ContributeController($scope, operations, scripts, scriptSnippet, $routeParams) {
   $scope.script = {
     title: '',
     content: '',
@@ -55,7 +44,7 @@ function ContributeController($scope, operations, scripts, scriptSnippet) {
     }
   };
 
-  var snippetId = $scope.getParameterByName('snippetId');
+  var snippetId = $routeParams['scriptId'];
 
   if (snippetId) {
     var snippet = scriptSnippet.getSnippet(snippetId);
