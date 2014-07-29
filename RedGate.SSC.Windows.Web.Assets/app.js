@@ -33,7 +33,7 @@ app.config(function($routeProvider, $locationProvider) {
         templateUrl: '/views/favorites.html',
         controller: 'FavoritesController'
       })
-      .when('/contribute', {
+      .when('/contribute/:scriptId?', {
         templateUrl: '/views/contribute.html',
         controller: 'ContributeController'
       });
