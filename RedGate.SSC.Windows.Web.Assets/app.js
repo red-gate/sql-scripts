@@ -3,6 +3,8 @@
 var angular = require('angular');
 require('angular-route');
 require('angular-hljs');
+require('angulartics');
+require('angulartics-google');
 
 require('./controllers');
 require('./directives');
@@ -13,8 +15,12 @@ var app = angular.module('sqlScripts', [
   'sqlScripts.controllers',
   'sqlScripts.directives',
   'sqlScripts.services',
-  'hljs'
-]);
+  'hljs',
+  'angulartics',
+  'angulartics.google.analytics'
+]).config(function ($analyticsProvider) {
+    $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+});
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider

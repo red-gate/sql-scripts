@@ -64,6 +64,20 @@ gulp.task('js', function() {
                   angular: 'angular'
               }
           },
+          angulartics: {
+              path: 'bower_components/angulartics/dist/angulartics.min.js',
+              exports: 'angulartics',
+              depends: {
+                  angular: 'angular'
+              }
+          },
+          'angulartics-google': {
+              path: 'bower_components/angulartics/dist/angulartics-ga.min.js',
+              exports: 'angularticsga',
+              depends: {
+                  angular: 'angulartics'
+              }
+          },
           hljs: {
                 path: 'bower_components/highlightjs/highlight.pack.js',
                 exports: 'hljs'
