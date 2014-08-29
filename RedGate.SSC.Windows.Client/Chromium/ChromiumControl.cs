@@ -6,6 +6,7 @@ using CefSharp;
 using CefSharp.WinForms;
 using log4net;
 using RedGate.SSC.Windows.Client.EmbeddedResourceFileSystem;
+using RedGate.SSC.Windows.Product;
 using RedGate.SSC.Windows.Web.Assets;
 
 namespace RedGate.SSC.Windows.Client.Chromium
@@ -23,6 +24,7 @@ namespace RedGate.SSC.Windows.Client.Chromium
             address = AddInternalDomain(address);
             m_Log = ObjectFactory.Get<ILog>();
             CEF.Initialize(new Settings());
+            CEF.SetCookiePath(TheProduct.ProductApplicationData);
 
             m_WebView = new WebView(address, new BrowserSettings
                                              {
@@ -37,7 +39,6 @@ namespace RedGate.SSC.Windows.Client.Chromium
             {
                 m_WebView.RegisterJsObject(toBind.Name, toBind);
             }
-
             m_WebView.PropertyChanged += (sender, args) =>
                                          {
                                              m_WebView.Address = address;
