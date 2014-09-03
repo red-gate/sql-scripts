@@ -22848,6 +22848,43 @@ var styleDirective = valueFn({
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{}],"angular":[function(require,module,exports){
 module.exports=require('l4T70p');
+},{}],"angulartics-google":[function(require,module,exports){
+module.exports=require('y3YmMr');
+},{}],"y3YmMr":[function(require,module,exports){
+(function (global){
+(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
+
+; global.angulartics = require("angular");
+/**
+ * @license Angulartics v0.16.3
+ * (c) 2013 Luis Farzati http://luisfarzati.github.io/angulartics
+ * Universal Analytics update contributed by http://github.com/willmcclellan
+ * License: MIT
+ */
+!function(a){"use strict";a.module("angulartics.google.analytics",["angulartics"]).config(["$analyticsProvider",function(a){a.settings.trackRelativePath=!0,a.registerPageTrack(function(a){window._gaq&&_gaq.push(["_trackPageview",a]),window.ga&&ga("send","pageview",a)}),a.registerEventTrack(function(a,b){if(b.value){var c=parseInt(b.value,10);b.value=isNaN(c)?0:c}window._gaq?_gaq.push(["_trackEvent",b.category,a,b.label,b.value,b.noninteraction]):window.ga&&(b.noninteraction?ga("send","event",b.category,a,b.label,b.value,{nonInteraction:1}):ga("send","event",b.category,a,b.label,b.value))})}])}(angular);
+; browserify_shim__define__module__export__(typeof angularticsga != "undefined" ? angularticsga : window.angularticsga);
+
+}).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
+
+}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"angular":"l4T70p"}],"Dl0caH":[function(require,module,exports){
+(function (global){
+(function browserifyShim(module, exports, define, browserify_shim__define__module__export__) {
+
+; global.angular = require("angular");
+/**
+ * @license Angulartics v0.16.3
+ * (c) 2013 Luis Farzati http://luisfarzati.github.io/angulartics
+ * License: MIT
+ */
+!function(a){"use strict";var b=window.angulartics||(window.angulartics={});b.waitForVendorCount=0,b.waitForVendorApi=function(a,c,d,e,f){f||b.waitForVendorCount++,e||(e=d,d=void 0),!Object.prototype.hasOwnProperty.call(window,a)||void 0!==d&&void 0===window[a][d]?setTimeout(function(){b.waitForVendorApi(a,c,d,e,!0)},c):(b.waitForVendorCount--,e(window[a]))},a.module("angulartics",[]).provider("$analytics",function(){var c={pageTracking:{autoTrackFirstPage:!0,autoTrackVirtualPages:!0,trackRelativePath:!1,autoBasePath:!1,basePath:""},eventTracking:{},bufferFlushDelay:1e3},d=["pageTrack","eventTrack","setUsername","setUserProperties","setUserPropertiesOnce","setSuperProperties","setSuperPropertiesOnce"],e={},f={},g=function(a){return function(){b.waitForVendorCount&&(e[a]||(e[a]=[]),e[a].push(arguments))}},h=function(b,c){return f[b]||(f[b]=[]),f[b].push(c),function(){var c=arguments;a.forEach(f[b],function(a){a.apply(this,c)},this)}},i={settings:c},j=function(a,b){b?setTimeout(a,b):a()},k={$get:function(){return i},api:i,settings:c,virtualPageviews:function(a){this.settings.pageTracking.autoTrackVirtualPages=a},firstPageview:function(a){this.settings.pageTracking.autoTrackFirstPage=a},withBase:function(b){this.settings.pageTracking.basePath=b?a.element("base").attr("href").slice(0,-1):""},withAutoBase:function(a){this.settings.pageTracking.autoBasePath=a}},l=function(b,d){i[b]=h(b,d);var f=c[b],g=f?f.bufferFlushDelay:null,k=null!==g?g:c.bufferFlushDelay;a.forEach(e[b],function(a,b){j(function(){d.apply(this,a)},b*k)})},m=function(a){return a.replace(/^./,function(a){return a.toUpperCase()})},n=function(a){var b="register"+m(a);k[b]=function(b){l(a,b)},i[a]=h(a,g(a))};return a.forEach(d,n),k}).run(["$rootScope","$location","$window","$analytics","$injector",function(a,b,c,d,e){if(d.settings.pageTracking.autoTrackFirstPage){var f=!0;if(e.has("$route")){var g=e.get("$route");for(var h in g.routes){f=!1;break}}else if(e.has("$state")){var i=e.get("$state");for(var j in i.get()){f=!1;break}}else f=!1;if(f)if(d.settings.pageTracking.autoBasePath&&(d.settings.pageTracking.basePath=c.location.pathname),d.settings.trackRelativePath){var k=d.settings.pageTracking.basePath+b.url();d.pageTrack(k)}else d.pageTrack(b.absUrl())}d.settings.pageTracking.autoTrackVirtualPages&&(d.settings.pageTracking.autoBasePath&&(d.settings.pageTracking.basePath=c.location.pathname+"#"),e.has("$route")&&a.$on("$routeChangeSuccess",function(a,c){if(!c||!(c.$$route||c).redirectTo){var e=d.settings.pageTracking.basePath+b.url();d.pageTrack(e)}}),e.has("$state")&&a.$on("$stateChangeSuccess",function(){var a=d.settings.pageTracking.basePath+b.url();d.pageTrack(a)}))}]).directive("analyticsOn",["$analytics","$timeout",function(b){function c(a){return["a:","button:","button:button","button:submit","input:button","input:submit"].indexOf(a.tagName.toLowerCase()+":"+(a.type||""))>=0}function d(a){return c(a)?"click":"click"}function e(a){return c(a)?a.innerText||a.value:a.id||a.name||a.tagName}function f(a){return"analytics"===a.substr(0,9)&&-1===["On","Event","If","Properties","EventType"].indexOf(a.substr(9))}function g(a){var b=a.slice(9);return"undefined"!=typeof b&&null!==b&&b.length>0?b.substring(0,1).toLowerCase()+b.substring(1):b}return{restrict:"A",scope:!0,link:function(c,h,i){var j=i.analyticsOn||d(h[0]);c.$analytics={},a.forEach(i.$attr,function(a,b){f(b)&&i.$observe(b,function(a){c.$analytics[g(b)]=a})}),a.element(h[0]).bind(j,function(d){var f=i.analyticsEvent||e(h[0]);c.$analytics.eventType=d.type,(!i.analyticsIf||c.$eval(i.analyticsIf))&&(i.analyticsProperties&&a.extend(c.$analytics,c.$eval(i.analyticsProperties)),b.eventTrack(f,c.$analytics))})}}}])}(angular);
+; browserify_shim__define__module__export__(typeof angulartics != "undefined" ? angulartics : window.angulartics);
+
+}).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
+
+}).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
+},{"angular":"l4T70p"}],"angulartics":[function(require,module,exports){
+module.exports=require('Dl0caH');
 },{}],"hljs":[function(require,module,exports){
 module.exports=require('JpqyvC');
 },{}],"JpqyvC":[function(require,module,exports){
@@ -22859,7 +22896,7 @@ var hljs=new function(){function k(v){return v.replace(/&/gm,"&amp;").replace(/<
 }).call(global, undefined, undefined, undefined, function defineExport(ex) { module.exports = ex; });
 
 }).call(this,typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],9:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 'use strict';
 
 module.exports = BaseController;
@@ -22933,7 +22970,7 @@ function BaseController($scope, $http, $timeout, operations, endpoints) {
   }, 2000);
 }
 
-},{}],10:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 'use strict';
 
 ContributeController.$inject = ['$scope', 'operations', 'scripts', 'scriptSnippet', '$routeParams'];
@@ -22989,7 +23026,7 @@ function ContributeController($scope, operations, scripts, scriptSnippet, $route
 
   $scope.loading.pageLoaded = true;
 }
-},{}],11:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 'use strict';
 
 module.exports = FavoritesController;
@@ -23036,7 +23073,7 @@ function FavoritesController($scope, operations, scripts) {
   $scope.loadPage();
 }
 
-},{}],12:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 
 FeaturedController.$inject = ['$scope', '$http', '$log', 'scripts'];
 
@@ -23067,7 +23104,7 @@ function FeaturedController($scope, $http, $log, scripts) {
 
 module.exports = FeaturedController;
 
-},{}],13:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -23081,7 +23118,7 @@ angular.module('sqlScripts.controllers', [])
   .controller('FeaturedController', require('./featured'))
   .controller('LoginController', require('./login'));
 
-},{"./base":9,"./contribute":10,"./favorites":11,"./featured":12,"./login":14,"./query-header":15,"./scripts":16,"angular":"l4T70p"}],14:[function(require,module,exports){
+},{"./base":13,"./contribute":14,"./favorites":15,"./featured":16,"./login":18,"./query-header":19,"./scripts":20,"angular":"l4T70p"}],18:[function(require,module,exports){
 'use strict';
 
 module.exports = LoginController;
@@ -23116,7 +23153,7 @@ function LoginController($scope, $http, $log, endpoints, credentials) {
   };
 }
 
-},{}],15:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 module.exports = QueryHeaderController;
@@ -23136,7 +23173,7 @@ function QueryHeaderController($scope, scriptItem, favorites) {
   };
 }
 
-},{}],16:[function(require,module,exports){
+},{}],20:[function(require,module,exports){
 'use strict';
 
 module.exports = ScriptsController;
@@ -23220,7 +23257,7 @@ function ScriptsController($scope, utils, scripts, favorites) {
   });
 }
 
-},{}],17:[function(require,module,exports){
+},{}],21:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -23228,7 +23265,7 @@ var angular = require('angular');
 angular.module('sqlScripts.directives', [])
   .directive('menuItem', require('./menu-item'));
 
-},{"./menu-item":18,"angular":"l4T70p"}],18:[function(require,module,exports){
+},{"./menu-item":22,"angular":"l4T70p"}],22:[function(require,module,exports){
 'use strict';
 
 module.exports = menuItem;
@@ -23249,12 +23286,14 @@ function menuItem($rootScope, $location) {
   };
 }
 
-},{}],19:[function(require,module,exports){
+},{}],23:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
 require('angular-route');
 require('angular-hljs');
+require('angulartics');
+require('angulartics-google');
 
 require('./controllers');
 require('./directives');
@@ -23265,8 +23304,12 @@ var app = angular.module('sqlScripts', [
   'sqlScripts.controllers',
   'sqlScripts.directives',
   'sqlScripts.services',
-  'hljs'
-]);
+  'hljs',
+  'angulartics',
+  'angulartics.google.analytics'
+]).config(function ($analyticsProvider) {
+    $analyticsProvider.firstPageview(true); /* Records pages that don't use $state or $route */
+});
 
 app.config(function($routeProvider, $locationProvider) {
     $routeProvider
@@ -23291,7 +23334,7 @@ app.config(function($routeProvider, $locationProvider) {
       });
 });
 
-},{"./controllers":13,"./directives":17,"./services":23,"angular":"l4T70p","angular-hljs":"x3FPou","angular-route":"RMfWRV"}],20:[function(require,module,exports){
+},{"./controllers":17,"./directives":21,"./services":27,"angular":"l4T70p","angular-hljs":"x3FPou","angular-route":"RMfWRV","angulartics":"Dl0caH","angulartics-google":"y3YmMr"}],24:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -23314,7 +23357,7 @@ function Credentials($log) {
   };
 };
 
-},{}],21:[function(require,module,exports){
+},{}],25:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -23359,7 +23402,7 @@ Endpoints.prototype.getListScriptsEndpoint = function() {
 
 module.exports = Endpoints;
 
-},{}],22:[function(require,module,exports){
+},{}],26:[function(require,module,exports){
 'use strict';
 
 module.exports = Favorites;
@@ -23391,7 +23434,7 @@ Favorites.prototype.addToFavorites = function(scriptId) {
   return result.promise;
 };
 
-},{}],23:[function(require,module,exports){
+},{}],27:[function(require,module,exports){
 'use strict';
 
 var angular = require('angular');
@@ -23406,7 +23449,7 @@ angular.module('sqlScripts.services', [])
   .service('credentials', require('./credentials'))
   .service('utils', require('./utils'));
 
-},{"./credentials":20,"./endpoints":21,"./favorites":22,"./operations":24,"./script-item":25,"./script-snippet":26,"./scripts":27,"./utils":28,"angular":"l4T70p"}],24:[function(require,module,exports){
+},{"./credentials":24,"./endpoints":25,"./favorites":26,"./operations":28,"./script-item":29,"./script-snippet":30,"./scripts":31,"./utils":32,"angular":"l4T70p"}],28:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -23451,7 +23494,7 @@ Operations.prototype.setFavorite = function(itemId) {
 
 module.exports = Operations;
 
-},{}],25:[function(require,module,exports){
+},{}],29:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -23471,7 +23514,7 @@ module.exports = function() {
   };
 };
 
-},{}],26:[function(require,module,exports){
+},{}],30:[function(require,module,exports){
 'use strict';
 
 // Return C# proxy if available
@@ -23489,7 +23532,7 @@ module.exports = function () {
     }
   };
 };
-},{}],27:[function(require,module,exports){
+},{}],31:[function(require,module,exports){
 'use strict';
 
 module.exports = Scripts;
@@ -23608,7 +23651,7 @@ Scripts.prototype.submitScript = function(script) {
   });
 }
 
-},{}],28:[function(require,module,exports){
+},{}],32:[function(require,module,exports){
 'use strict';
 
 module.exports = function() {
@@ -23626,4 +23669,4 @@ module.exports = function() {
   };
 };
 
-},{}]},{},[19])
+},{}]},{},[23])
