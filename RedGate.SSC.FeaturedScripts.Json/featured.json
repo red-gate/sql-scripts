@@ -8,25 +8,25 @@
             "scriptId": 62380
         },
         {
-            "title": "Restore All Backups",
-            "author": "David Atkinson",
-            "description": "Solution for Backup, Integrity Check, Index and Statistics Maintenance in SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014.",
-            "imageSrc": "https://media.licdn.com/mpr/mpr/shrink_200_200/p/2/005/013/09d/2b8cb76.jpg",
-            "scriptId": 62380
+            "title": "List all Usernames, Roles for all the databases",
+            "author": "Shiva Challa",
+            "description": "This script generates a list of Usernames and the database Roles that the user belongs to in all the databases; with a couple of other useful information detailed below.",
+            "imageSrc": "http://www.sqlservercentral.com/Images/3892.gif",
+            "scriptId": 63841
         },
         {
-            "title": "SQL Server Backup, Integrity Check, Index and Statistics Maintenance",
-            "author": "Ola Hallengren",
-            "description": "Solution for Backup, Integrity Check, Index and Statistics Maintenance in SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014.",
+            "title": "Script all indexes as CREATE INDEX statements",
+            "author": "Lowell Izaguirre",
+            "description": "This script will generate CREATE index statements for all indexes in the database",
             "imageSrc": "http://www.sqlservercentral.com/Images/3892.gif",
-            "scriptId": 62380
+            "scriptId": 31652
         },
         {
-            "title": "SQL Server Backup, Integrity Check, Index and Statistics Maintenance",
-            "author": "Ola Hallengren",
-            "description": "Solution for Backup, Integrity Check, Index and Statistics Maintenance in SQL Server 2005, SQL Server 2008, SQL Server 2008 R2, SQL Server 2012 and SQL Server 2014.",
+            "title": "Date and Time dimension creation and population T-SQL",
+            "author": "Joshua A. Walker",
+            "description": "SThis code will create the tables, populate the date and time tables, add holidays, add indexes and there are a few code snippets at the bottom for using them.",
             "imageSrc": "http://www.sqlservercentral.com/Images/3892.gif",
-            "scriptId": 62380
+            "scriptId": 65762
         }
     ]
 }
