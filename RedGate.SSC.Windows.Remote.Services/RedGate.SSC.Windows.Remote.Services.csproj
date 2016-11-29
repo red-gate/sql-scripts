@@ -40,20 +40,20 @@
       <HintPath>..\packages\CommandLineParser.1.9.71\lib\net35\CommandLine.dll</HintPath>
     </Reference>
     <Reference Include="RedGate.AppHost.Client, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=x86">
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43-KeyPath\lib\RedGate.AppHost.Client.exe</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Client.exe</HintPath>
     </Reference>
     <Reference Include="RedGate.AppHost.Interfaces, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43-KeyPath\lib\RedGate.AppHost.Interfaces.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Interfaces.dll</HintPath>
     </Reference>
     <Reference Include="RedGate.AppHost.Remoting.WPF, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43-KeyPath\lib\RedGate.AppHost.Remoting.WPF.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Remoting.WPF.dll</HintPath>
     </Reference>
     <Reference Include="RedGate.AppHost.Server, Version=0.0.1.43, Culture=neutral, PublicKeyToken=7f465a1c156d4d57, processorArchitecture=MSIL">
+      <HintPath>..\packages\RedGate.AppHost.0.0.1.43-KeyPath\lib\RedGate.AppHost.Server.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\RedGate.AppHost.0.0.1.43\lib\RedGate.AppHost.Server.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.AddIn.Contract" />
